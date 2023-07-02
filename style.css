@@ -1,0 +1,506 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --primary-color: #eceff5;
+    --secondary-color: #212121;
+    --name: #3DA5D9;
+    --card: #f8f5f5ea;
+}
+
+.dark-theme {
+    --primary-color: #282838;
+    --secondary-color: #fff;
+    --name: #2e65e7;
+    --card: #282838;
+}
+
+
+/*------------ Nav Bar --------------- */
+
+nav {
+    /* height: 70px; */
+    width: 100%;
+    background-color: var(--primary-color);
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 1px 10px rgb(133, 131, 131);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 120%, 0% 120%);
+}
+
+.logo {
+    height: 100%;
+    width: 50%;
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 70px;
+    padding: 0 100px;
+    color: var(--secondary-color);
+}
+
+nav ul {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav a {
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+nav a:hover{
+    color: var(--name);
+}
+
+nav>div>h3 {
+    color: var(--secondary-color);
+}
+
+nav>div>button>img {
+    height: 30px;
+}
+
+#theme {
+    margin-right: 35px;
+}
+
+
+/* ----------- Section 1 ------------- */
+#head {
+    height: 90vh;
+    width: 100%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+#head>div {
+    /* border: 1px solid black; */
+    font-size: xx-large;
+    color: var(--secondary-color);
+}
+
+#head>div>img {
+    border: 8px solid var(--name);
+    height: 380px;
+    width: 380px;
+    border-radius: 100%;
+    padding: 10px;
+}
+
+#myimg :hover {
+    scale: 1.03;
+    transition: all 1s ease;
+    cursor: pointer;
+    border: 0 solid var(--primary-color);
+}
+
+@keyframes up {
+    from {
+        transform: translateY(70px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+#intro {
+    animation: up 1.2s ease-out;
+}
+
+#intro>h1>span {
+    color: var(--name);
+}
+
+#intro>h2 {
+    font-weight: 400;
+    font-size: xx-large;
+
+}
+
+.cvbtn:hover {
+    color: var(--primary-color);
+}
+
+
+.cvbtn {
+    text-decoration: none;
+    padding: 10px;
+    font-size: large;
+    border: none;
+    background-color: var(--name);
+    color: var(--secondary-color);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* -------------- Education -------------- */
+
+#education {
+    height: 45vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+}
+
+#education> :first-child {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+}
+
+#education> :last-child {
+    width: 70%;
+    height: 60%;
+    display: grid;
+    grid-template-rows: repeat(3, 50px);
+    grid-template-columns: 100px 270px 100px 100px;
+    font-size: larger;
+    align-content: center;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    color: var(--secondary-color);
+}
+
+/* ---------------- Skills ------------------ */
+
+#skill {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    background-color: var(--primary-color);
+}
+
+#skill>div {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+}
+
+#skill>article {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#skill>article>div {
+    height: 300px;
+    width: 250px;
+    border-radius: 15px;
+    border-top: 5px solid var(--name);
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--card);
+    box-shadow: 0px 0px 2px;
+    color: var(--secondary-color);
+}
+
+/* ------------------ Project ------------------ */
+
+#project {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    background-color: var(--primary-color);
+}
+
+#project>div {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+}
+
+#project>article {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-evenly;
+    /* border: 1px solid black; */
+}
+
+#project>article>a>div {
+    /* border: 2px solid black; */
+    height: 300px;
+    width: 250px;
+    border-radius: 15px;
+    border-top: 5px solid var(--name);
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: white; */
+    box-shadow: 0px 0px 2px;
+    background-color: var(--card);
+    color: var(--secondary-color);
+}
+
+#project>article>a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.heading {
+    font-size: xx-large;
+}
+
+/* ------------------- Footer ------------------ */
+
+footer {
+    background-color: var(--primary-color);
+    height: 220px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer>div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--secondary-color);
+}
+
+.phone {
+    width: 35%;
+}
+
+footer>a {
+    text-decoration: none;
+    color: #191923;
+}
+
+i {
+    font-size: 27px;
+    color: var(--secondary-color);
+}
+
+#theme {
+    width: 25px;
+    cursor: pointer;
+}
+
+
+
+/* ----------------- Small screen ---------------- */
+
+@media screen and (max-width: 730px) {
+
+    /* ------------ Nav bar ------------- */
+    nav ul {
+        display: none;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: left;
+        color: var(--secondary-color);
+    }
+
+    #theme {
+        width: 8%;
+        margin-right: 40px;
+    }
+
+    /* -------------  Header ------------- */
+
+    #head {
+        height: 90vh;
+        width: 100%;
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 70px;
+    }
+
+    #head>div {
+        font-size: large;   
+    }
+
+    #head>div>img {
+        height: 280px;
+        width: 280px;
+        border-radius: 100%;
+    }
+
+    #intro {
+        text-align: center;
+    }
+
+    #intro>h1>span {
+        font-size: 35px;
+    }
+
+    #intro>h2 {
+        height: 70%;
+    }
+
+    /* --------------- Education ---------------- */
+
+    #education {
+        height: 45vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary-color);
+    }
+
+    #education> :first-child {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--secondary-color);
+    }
+
+    #education> :last-child {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 50px 140px 40px 40px;
+        grid-template-rows: 50px 50px 50px;
+        font-size: larger;
+        align-content: space-evenly;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-items: center;
+        color: var(--secondary-color);
+    }
+
+    /* ------------ Skills ------------ */
+
+    #skill {
+        height: 93vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--primary-color);
+    }
+
+    #skill>div {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--secondary-color);
+    }
+
+    #skill>article {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+
+    /* ------------------ Project ------------------ */
+
+    #project {
+        height: 93vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--primary-color);
+    }
+
+    #project>div {
+        width: 100%;
+        height: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--secondary-color);
+    }
+
+    #project>article {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    /* ------------------- Footer ------------------ */
+
+    footer {
+        background-color: var(--primary-color);
+        height: 220px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    footer>div {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: var(--secondary-color);
+    }
+
+    .phone {
+        width: 100%;
+    }
+
+    footer>a {
+        text-decoration: none;
+        color: #191923;
+    }
+
+    i {
+        font-size: 27px;
+        color: var(--secondary-color);
+    }
+
+}

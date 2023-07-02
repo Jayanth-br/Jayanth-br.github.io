@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Jayanth Portfolio</title>
+</head>
+
+<body>
+
+    <!--------------------- Nav bar --------------------->
+
+    <nav class="navbar">
+        <label class="logo">Portfolio</label>
+        <ul class="menu">
+            <li><a href="#edu">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#pro">Project</a></li>
+        </ul>
+        <img src="./Images/moon.png" alt="theme toggle button" id="theme">
+    </nav>
+
+    <!--------------------- Section 1 --------------------->
+
+    <section id="head">
+        <div id="myimg">
+            <img src="./Images/Jay_Img1.png" alt="Jayanth's profile photo">
+        </div>
+        <div id="intro">
+            <h1>Hello, I am <span>Jayanth</span> B R</h1>
+            <h2>I'm a Java Full Stack Developer</h2>
+            <a href="./Images/Jayanth_B R_Resume.pdf" download class="cvbtn">Download CV</a>
+        </div>
+    </section>
+
+    <!--------------------- Eductaion ------------------->
+
+    <a id="edu"></a>
+    <section id="education">
+        <div>
+            <h1 class="heading">Education</h1>
+        </div>
+        <div>
+            B.E in Civil
+            <div>
+                Jain Institute of Technology
+            </div>
+            <div>
+                71%
+            </div>
+            <div>
+                2022
+            </div>
+            <div>
+                PUC / 12 <sup>th</sup>
+            </div>
+            <div>
+                Siddaganga PU College
+            </div>
+            <div>
+                75%
+            </div>
+            <div>
+                2018
+            </div>
+            <div>
+                SSLC / 10<sup>th</sup>
+            </div>
+            <div>
+                St.John's High School
+            </div>
+            <div>
+                89%
+            </div>
+            <div>
+                2016
+            </div>
+        </div>
+    </section>
+
+    <!--------------------- Skills ---------------------->
+
+    <a id="skills"></a>
+    <section id="skill">
+        <div>
+            <h1 class="heading">Skills</h1>
+        </div>
+        <article>
+            <div>
+                <h1>Back-End</h1>
+                <p>Java</p>
+                <p>Oracle SQL</p>
+                <p>Hibernate</p>
+                <p>Spring Boot</p>
+            </div>
+            <div>
+                <h1>Front-End</h1>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>Javascript</p>
+                <p>React.js</p>
+            </div>
+        </article>
+    </section>
+
+    <!---------------- Project ----------------->
+
+    <a id="pro"></a>
+    <section id="project">
+        <div>
+            <h1 class="heading">Projects</h1>
+        </div>
+        <article>
+            <a target="_blank" href="https://jayanth-br.github.io/weather-app-react/">
+                <div>
+                    <h1>Weather Application</h1>
+                    <p>Developed an weather application using React.js and OpenWeather API</p>
+                </div>
+            </a>
+            <a href="https://github.com/Jayanth-br/FullStack-CRUD-operation">
+                <div>
+                    <h1>Full Stack User Application</h1>
+                    <p>Full stack application developed by using Spring boot and react.js</p>
+                </div>
+            </a>
+        </article>
+    </section>
+
+    <!---------------- Footer ---------------->
+
+    <footer>
+        <div>
+            <h1>Contact Details</h1>
+        </div>
+        <div class="phone">
+            <i class="fa-solid fa-envelope"></i>
+            <h4>jayanthbr2000@gmail.com</h4>
+            <i class="fa-solid fa-phone"></i>
+            <h4>9980667184</h4>
+        </div>
+        <div>
+            <a target="_blank" href="https://www.linkedin.com/in/jayanth-b-r-1245b5200">
+                <div>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </a>
+            <a target="_blank" href="https://github.com/Jayanth-br">
+                <div>
+                    <i class="fa-brands fa-github"></i>
+                </div>
+            </a>
+            <a target="_blank" href="https://twitter.com/jayanthBR11?t=t1yFhEsig8zoHII-3II-3IxMdA&s=09">
+                <div>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        var theme = document.getElementById("theme")
+        theme.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                theme.src = "./Images/sun.png";
+            }
+            else {
+                theme.src = "./Images/moon.png";
+            }
+        }
+
+        $('.menubtn').click(function () {
+            $('.navbar .menu').toggleClass("active");
+        })
+
+    </script>
+
+</body>
+
+</html>
