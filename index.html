@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>Jayanth Portfolio</title>
 </head>
@@ -17,20 +17,20 @@
     <!--------------------- Nav bar --------------------->
 
     <nav class="navbar">
-        <label class="logo">Portfolio</label>
+        <h2 class="logo">Portfolio</h2>
         <ul class="menu">
-            <li><a href="#edu">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#pro">Project</a></li>
+            <li class="navbar-menus"><a href="#edu">Education</a></li>
+            <li class="navbar-menus"><a href="#skills">Skills</a></li>
+            <li class="navbar-menus"><a href="#pro">Project</a></li>
+            <li class="navbar-menus"><img src="./Images/moon.png" alt="theme toggle button" id="theme"></li>
         </ul>
-        <img src="./Images/moon.png" alt="theme toggle button" id="theme">
     </nav>
 
     <!--------------------- Section 1 --------------------->
 
     <section id="head">
         <div id="myimg">
-            <img src="./Images/Jay_Img1.png" alt="Jayanth's profile photo">
+            <img src="./Images/MyImg.jpg" alt="Jayanth's profile photo">
         </div>
         <div id="intro">
             <h1>Hello, I am <span>Jayanth</span> B R</h1>
@@ -157,21 +157,23 @@
             </a>
             <a target="_blank" href="https://twitter.com/jayanthBR11?t=t1yFhEsig8zoHII-3II-3IxMdA&s=09">
                 <div>
-                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
                 </div>
             </a>
         </div>
     </footer>
 
     <script>
-        var theme = document.getElementById("theme")
-        theme.onclick = function () {
-            document.body.classList.toggle("dark-theme");
-            if (document.body.classList.contains("dark-theme")) {
-                theme.src = "./Images/sun.png";
-            }
-            else {
-                theme.src = "./Images/moon.png";
+        const themeHandler = document.querySelector("img#theme");
+        if(themeHandler){
+            themeHandler.onclick = function () {
+                document.body.classList.toggle("dark-theme");
+                if (document.body.classList.contains("dark-theme")) {
+                    themeHandler.src = "./Images/sun.png";
+                }
+                else {
+                    themeHandler.src = "./Images/moon.png";
+                }
             }
         }
 
@@ -182,5 +184,4 @@
     </script>
 
 </body>
-
 </html>
