@@ -23,20 +23,18 @@
 /*------------ Nav Bar --------------- */
 
 nav {
-    /* height: 70px; */
     width: 100%;
     background-color: var(--primary-color);
-    /* border: 1px solid black; */
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     box-shadow: 0 1px 10px rgb(133, 131, 131);
     clip-path: polygon(0% 0%, 100% 0%, 100% 120%, 0% 120%);
 }
 
 .logo {
     height: 100%;
-    width: 50%;
+    width: 30%;
     font-size: 35px;
     font-weight: bold;
     line-height: 70px;
@@ -46,7 +44,7 @@ nav {
 
 nav ul {
     list-style-type: none;
-    width: 100%;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -70,9 +68,8 @@ nav>div>h3 {
 nav>div>button>img {
     height: 30px;
 }
-
-#theme {
-    margin-right: 35px;
+.navbar-menus {
+    padding: 10px;
 }
 
 
@@ -129,7 +126,7 @@ nav>div>button>img {
 #intro>h2 {
     font-weight: 400;
     font-size: xx-large;
-
+    margin: 0px 0px 6px 0px;
 }
 
 .cvbtn:hover {
@@ -139,12 +136,12 @@ nav>div>button>img {
 
 .cvbtn {
     text-decoration: none;
-    padding: 10px;
+    padding: 10px 12px;
     font-size: large;
     border: none;
     background-color: var(--name);
     color: var(--secondary-color);
-    border-radius: 6px;
+    border-radius: 3px;
     cursor: pointer;
 }
 
